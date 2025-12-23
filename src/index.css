@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  font-family: 'Heebo', system-ui, sans-serif;
+  background-color: #F7F9FC;
+  color: #2D3748;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Disable text selection for game elements */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Large emoji display */
+.emoji-display {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.emoji-display-large {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+/* Tap highlight for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom animations */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(255, 107, 107, 0);
+  }
+}
+
+@keyframes star-spin {
+  from {
+    transform: rotate(0deg) scale(0);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.animate-star-spin {
+  animation: star-spin 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Confetti colors for celebrations */
+.confetti-red { color: #FF6B6B; }
+.confetti-yellow { color: #FFE66D; }
+.confetti-green { color: #7BC950; }
+.confetti-blue { color: #4ECDC4; }
+.confetti-purple { color: #9B59B6; }

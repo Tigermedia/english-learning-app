@@ -1,0 +1,7 @@
+export { HomePage } from './HomePage';
+export { SettingsPage } from './SettingsPage';
+export { LearningPage } from './LearningPage';
+export { QuestionPage } from './QuestionPage';
+export { ResultsPage } from './ResultsPage';
+export { ProgressPage } from './ProgressPage';
+export { AchievementsPage } from './AchievementsPage';
