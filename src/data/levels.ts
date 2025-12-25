@@ -60,7 +60,7 @@ export const difficultyConfigs: DifficultyConfig[] = [
     id: 'easy',
     nameHebrew: 'קל',
     timerSeconds: 15,
-    optionsCount: 2,
+    optionsCount: 4,
     xpMultiplier: 1,
     learningPhaseSeconds: 5,
   },
@@ -116,7 +116,7 @@ export const calculateXP = (
 // Calculate stars earned based on accuracy
 export const calculateStars = (accuracy: number): number => {
   if (accuracy >= 90) return 3;
-  if (accuracy >= 70) return 2;
-  if (accuracy >= 50) return 1;
+  if (accuracy >= 60) return 2;
+  if (accuracy >= 30) return 1;
   return 0;
 };

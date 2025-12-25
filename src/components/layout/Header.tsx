@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { ProgressBar } from '../ui';
 import { getLevelInfo, getLevelProgress } from '../../data/levels';
 
@@ -10,6 +11,7 @@ interface HeaderProps {
 }
 
 export function Header({ totalXP, showBack = false, onBack, title }: HeaderProps) {
+  const navigate = useNavigate();
   const levelInfo = getLevelInfo(totalXP);
   const levelProgress = getLevelProgress(totalXP);
 
@@ -56,15 +58,30 @@ export function Header({ totalXP, showBack = false, onBack, title }: HeaderProps
           </div>
         )}
 
-        {/* Settings button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-xl"
-          aria-label="הגדרות"
-        >
-          ⚙️
-        </motion.button>
+        {/* Action buttons */}
+        <div className="flex items-center gap-2">
+          {/* Parents info button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => navigate('/parents')}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-lg"
+            aria-label="מידע להורים"
+          >
+            ℹ️
+          </motion.button>
+
+          {/* Settings button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => navigate('/settings')}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-xl"
+            aria-label="הגדרות"
+          >
+            ⚙️
+          </motion.button>
+        </div>
       </div>
     </header>
   );

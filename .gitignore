@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Environment variables
+.env
+
+# Playwright MCP screenshots
+.playwright-mcp/
+
+# Windows reserved filenames
+nul
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

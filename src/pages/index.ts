@@ -5,3 +5,5 @@ export { QuestionPage } from './QuestionPage';
 export { ResultsPage } from './ResultsPage';
 export { ProgressPage } from './ProgressPage';
 export { AchievementsPage } from './AchievementsPage';
+export { LoginPage } from './LoginPage';
+export { ParentsPage } from './ParentsPage';

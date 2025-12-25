@@ -1,5 +1,7 @@
-import { createContext, useContext, useReducer, useEffect, type ReactNode } from 'react';
+import { createContext, useContext, useReducer, useEffect, useCallback, type ReactNode } from 'react';
 import type { UserProgress, CategoryId, CategoryProgressData } from '../types';
+import { useUser } from './UserContext';
+import { useConvexSync } from '../hooks/useConvexSync';
 
 // Storage key
 const STORAGE_KEY = 'english-app-progress';
@@ -185,6 +187,8 @@ interface ProgressProviderProps {
 }
 
 export function ProgressProvider({ children }: ProgressProviderProps) {
+  const { user } = useUser();
+
   // Load initial state from localStorage
   const loadInitialState = (): UserProgress => {
     try {
@@ -208,6 +212,18 @@ export function ProgressProvider({ children }: ProgressProviderProps) {
       console.warn('Error saving progress to localStorage:', error);
     }
   }, [progress]);
+
+  // Callback to handle progress loaded from server
+  const handleProgressLoaded = useCallback((serverProgress: UserProgress) => {
+    dispatch({ type: 'SET_PROGRESS', payload: serverProgress });
+  }, []);
+
+  // Sync with Convex
+  useConvexSync({
+    userId: user?._id ?? null,
+    localProgress: progress,
+    onProgressLoaded: handleProgressLoaded,
+  });
 
   // Action helpers
   const addXP = (amount: number) => dispatch({ type: 'ADD_XP', payload: amount });

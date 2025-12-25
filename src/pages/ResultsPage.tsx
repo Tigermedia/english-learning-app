@@ -1,14 +1,16 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useGame, useProgress } from '../store';
 import { calculateStars } from '../data/levels';
+import { checkBadges } from '../utils/checkBadges';
 import { Button, Card } from '../components/ui';
 
 export function ResultsPage() {
   const navigate = useNavigate();
   const { session, resetGame } = useGame();
-  const { incrementSessions, updateStreak } = useProgress();
+  const { progress, incrementSessions, updateStreak, earnBadge } = useProgress();
+  const badgesCheckedRef = useRef(false);
 
   // Redirect if no session
   useEffect(() => {
@@ -24,6 +26,26 @@ export function ResultsPage() {
       updateStreak();
     }
   }, []);
+
+  // Check and award badges after progress is updated
+  useEffect(() => {
+    if (session?.phase === 'results' && !badgesCheckedRef.current) {
+      badgesCheckedRef.current = true;
+
+      // Calculate accuracy for badge checking
+      const totalQuestions = session.questions.length;
+      const correctAnswers = session.answers.filter((a) => a.isCorrect).length;
+      const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+
+      // Check which badges should be awarded
+      const newBadges = checkBadges(progress, { sessionAccuracy: accuracy });
+
+      // Award each new badge
+      newBadges.forEach((badgeId) => {
+        earnBadge(badgeId);
+      });
+    }
+  }, [session, progress, earnBadge]);
 
   // Calculate results
   const results = useMemo(() => {
