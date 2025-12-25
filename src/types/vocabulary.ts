@@ -1,5 +1,5 @@
 // Category identifiers
-export type CategoryId = 'colors' | 'animals' | 'numbers' | 'family' | 'food';
+export type CategoryId = 'colors' | 'animals' | 'numbers' | 'family' | 'food' | 'body';
 
 // Single vocabulary item
 export interface VocabularyItem {

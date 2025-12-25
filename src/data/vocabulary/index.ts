@@ -3,3 +3,4 @@ export { animalsVocabulary } from './animals';
 export { numbersVocabulary } from './numbers';
 export { familyVocabulary } from './family';
 export { foodVocabulary } from './food';
+export { bodyVocabulary } from './body';

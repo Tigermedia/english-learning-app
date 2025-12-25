@@ -5,6 +5,7 @@ import {
   numbersVocabulary,
   familyVocabulary,
   foodVocabulary,
+  bodyVocabulary,
 } from './vocabulary';
 
 export const categories: Category[] = [
@@ -32,7 +33,7 @@ export const categories: Category[] = [
     nameEnglish: 'Numbers',
     emoji: '🔢',
     color: 'bg-blue-100',
-    description: 'למדו לספור מ-1 עד 20 באנגלית',
+    description: 'למדו מספרים וחשבון באנגלית',
     items: numbersVocabulary,
   },
   {
@@ -52,6 +53,15 @@ export const categories: Category[] = [
     color: 'bg-green-100',
     description: 'למדו את שמות המאכלים באנגלית',
     items: foodVocabulary,
+  },
+  {
+    id: 'body',
+    nameHebrew: 'חלקי גוף',
+    nameEnglish: 'Body Parts',
+    emoji: '🦵',
+    color: 'bg-red-100',
+    description: 'למדו את שמות חלקי הגוף באנגלית',
+    items: bodyVocabulary,
   },
 ];
 

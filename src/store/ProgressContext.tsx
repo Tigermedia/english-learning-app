@@ -33,6 +33,7 @@ const DEFAULT_PROGRESS: UserProgress = {
     numbers: createDefaultCategoryProgress('numbers'),
     family: createDefaultCategoryProgress('family'),
     food: createDefaultCategoryProgress('food'),
+    body: createDefaultCategoryProgress('body'),
   },
   earnedBadges: [],
   sessionHistory: [],

@@ -1,0 +1,90 @@
+import type { VocabularyItem } from '../../types';
+
+export const bodyVocabulary: VocabularyItem[] = [
+  // Head & face
+  { id: 'body_head', english: 'head', hebrew: 'ראש', emoji: '🗣️', category: 'body' },
+  { id: 'body_face', english: 'face', hebrew: 'פנים', emoji: '😊', category: 'body' },
+  { id: 'body_hair', english: 'hair', hebrew: 'שיער', emoji: '💇', category: 'body' },
+  { id: 'body_eye', english: 'eye', hebrew: 'עין', emoji: '👁️', category: 'body' },
+  { id: 'body_eyes', english: 'eyes', hebrew: 'עיניים', emoji: '👀', category: 'body' },
+  { id: 'body_nose', english: 'nose', hebrew: 'אף', emoji: '👃', category: 'body' },
+  { id: 'body_ear', english: 'ear', hebrew: 'אוזן', emoji: '👂', category: 'body' },
+  { id: 'body_ears', english: 'ears', hebrew: 'אוזניים', emoji: '👂👂', category: 'body' },
+  { id: 'body_mouth', english: 'mouth', hebrew: 'פה', emoji: '👄', category: 'body' },
+  { id: 'body_lips', english: 'lips', hebrew: 'שפתיים', emoji: '💋', category: 'body' },
+  { id: 'body_tongue', english: 'tongue', hebrew: 'לשון', emoji: '👅', category: 'body' },
+  { id: 'body_teeth', english: 'teeth', hebrew: 'שיניים', emoji: '🦷', category: 'body' },
+  { id: 'body_tooth', english: 'tooth', hebrew: 'שן', emoji: '🦷', category: 'body' },
+  { id: 'body_chin', english: 'chin', hebrew: 'סנטר', emoji: '😐', category: 'body' },
+  { id: 'body_cheek', english: 'cheek', hebrew: 'לחי', emoji: '😊', category: 'body' },
+  { id: 'body_forehead', english: 'forehead', hebrew: 'מצח', emoji: '🤔', category: 'body' },
+  { id: 'body_eyebrow', english: 'eyebrow', hebrew: 'גבה', emoji: '🤨', category: 'body' },
+  { id: 'body_eyelash', english: 'eyelash', hebrew: 'ריס', emoji: '👁️', category: 'body' },
+
+  // Upper body
+  { id: 'body_neck', english: 'neck', hebrew: 'צוואר', emoji: '🦒', category: 'body' },
+  { id: 'body_shoulder', english: 'shoulder', hebrew: 'כתף', emoji: '💪', category: 'body' },
+  { id: 'body_shoulders', english: 'shoulders', hebrew: 'כתפיים', emoji: '🤷', category: 'body' },
+  { id: 'body_chest', english: 'chest', hebrew: 'חזה', emoji: '🫁', category: 'body' },
+  { id: 'body_back', english: 'back', hebrew: 'גב', emoji: '🔙', category: 'body' },
+  { id: 'body_stomach', english: 'stomach', hebrew: 'בטן', emoji: '🫃', category: 'body' },
+  { id: 'body_belly', english: 'belly', hebrew: 'כרס', emoji: '🫃', category: 'body' },
+
+  // Arms & hands
+  { id: 'body_arm', english: 'arm', hebrew: 'זרוע', emoji: '💪', category: 'body' },
+  { id: 'body_arms', english: 'arms', hebrew: 'זרועות', emoji: '🤗', category: 'body' },
+  { id: 'body_elbow', english: 'elbow', hebrew: 'מרפק', emoji: '💪', category: 'body' },
+  { id: 'body_wrist', english: 'wrist', hebrew: 'פרק כף יד', emoji: '⌚', category: 'body' },
+  { id: 'body_hand', english: 'hand', hebrew: 'יד', emoji: '✋', category: 'body' },
+  { id: 'body_hands', english: 'hands', hebrew: 'ידיים', emoji: '🙌', category: 'body' },
+  { id: 'body_palm', english: 'palm', hebrew: 'כף יד', emoji: '🤚', category: 'body' },
+  { id: 'body_finger', english: 'finger', hebrew: 'אצבע', emoji: '👆', category: 'body' },
+  { id: 'body_fingers', english: 'fingers', hebrew: 'אצבעות', emoji: '🖐️', category: 'body' },
+  { id: 'body_thumb', english: 'thumb', hebrew: 'אגודל', emoji: '👍', category: 'body' },
+  { id: 'body_nail', english: 'nail', hebrew: 'ציפורן', emoji: '💅', category: 'body' },
+  { id: 'body_fist', english: 'fist', hebrew: 'אגרוף', emoji: '✊', category: 'body' },
+
+  // Legs & feet
+  { id: 'body_leg', english: 'leg', hebrew: 'רגל', emoji: '🦵', category: 'body' },
+  { id: 'body_legs', english: 'legs', hebrew: 'רגליים', emoji: '🦵🦵', category: 'body' },
+  { id: 'body_thigh', english: 'thigh', hebrew: 'ירך', emoji: '🍗', category: 'body' },
+  { id: 'body_knee', english: 'knee', hebrew: 'ברך', emoji: '🦵', category: 'body' },
+  { id: 'body_knees', english: 'knees', hebrew: 'ברכיים', emoji: '🧎', category: 'body' },
+  { id: 'body_ankle', english: 'ankle', hebrew: 'קרסול', emoji: '🦶', category: 'body' },
+  { id: 'body_foot', english: 'foot', hebrew: 'כף רגל', emoji: '🦶', category: 'body' },
+  { id: 'body_feet', english: 'feet', hebrew: 'כפות רגליים', emoji: '🦶🦶', category: 'body' },
+  { id: 'body_toe', english: 'toe', hebrew: 'אצבע רגל', emoji: '🦶', category: 'body' },
+  { id: 'body_toes', english: 'toes', hebrew: 'אצבעות רגל', emoji: '🦶', category: 'body' },
+  { id: 'body_heel', english: 'heel', hebrew: 'עקב', emoji: '👠', category: 'body' },
+
+  // Internal organs
+  { id: 'body_heart', english: 'heart', hebrew: 'לב', emoji: '❤️', category: 'body' },
+  { id: 'body_brain', english: 'brain', hebrew: 'מוח', emoji: '🧠', category: 'body' },
+  { id: 'body_lungs', english: 'lungs', hebrew: 'ריאות', emoji: '🫁', category: 'body' },
+  { id: 'body_bone', english: 'bone', hebrew: 'עצם', emoji: '🦴', category: 'body' },
+  { id: 'body_bones', english: 'bones', hebrew: 'עצמות', emoji: '💀', category: 'body' },
+  { id: 'body_muscle', english: 'muscle', hebrew: 'שריר', emoji: '💪', category: 'body' },
+  { id: 'body_blood', english: 'blood', hebrew: 'דם', emoji: '🩸', category: 'body' },
+  { id: 'body_skin', english: 'skin', hebrew: 'עור', emoji: '🖐️', category: 'body' },
+
+  // Body actions
+  { id: 'body_smile', english: 'smile', hebrew: 'חיוך', emoji: '😊', category: 'body' },
+  { id: 'body_cry', english: 'cry', hebrew: 'בכי', emoji: '😢', category: 'body' },
+  { id: 'body_laugh', english: 'laugh', hebrew: 'צחוק', emoji: '😂', category: 'body' },
+  { id: 'body_sleep', english: 'sleep', hebrew: 'שינה', emoji: '😴', category: 'body' },
+  { id: 'body_walk', english: 'walk', hebrew: 'הליכה', emoji: '🚶', category: 'body' },
+  { id: 'body_run', english: 'run', hebrew: 'ריצה', emoji: '🏃', category: 'body' },
+  { id: 'body_jump', english: 'jump', hebrew: 'קפיצה', emoji: '🤸', category: 'body' },
+  { id: 'body_sit', english: 'sit', hebrew: 'ישיבה', emoji: '🪑', category: 'body' },
+  { id: 'body_stand', english: 'stand', hebrew: 'עמידה', emoji: '🧍', category: 'body' },
+  { id: 'body_wave', english: 'wave', hebrew: 'נופף', emoji: '👋', category: 'body' },
+  { id: 'body_clap', english: 'clap', hebrew: 'מחיאת כפיים', emoji: '👏', category: 'body' },
+  { id: 'body_hug', english: 'hug', hebrew: 'חיבוק', emoji: '🤗', category: 'body' },
+
+  // Senses
+  { id: 'body_see', english: 'see', hebrew: 'לראות', emoji: '👀', category: 'body' },
+  { id: 'body_hear', english: 'hear', hebrew: 'לשמוע', emoji: '👂', category: 'body' },
+  { id: 'body_smell', english: 'smell', hebrew: 'להריח', emoji: '👃', category: 'body' },
+  { id: 'body_taste', english: 'taste', hebrew: 'לטעום', emoji: '👅', category: 'body' },
+  { id: 'body_touch', english: 'touch', hebrew: 'לגעת', emoji: '✋', category: 'body' },
+];
